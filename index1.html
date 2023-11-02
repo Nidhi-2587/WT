@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+       *{
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+         text-decoration: none;
+         transition: all.2s linear;
+      
+      }
+      body{
+        background: beige;
+        
+      }
+ :root{
+    --brown: --brown;
+    --black: #130f40;
+    --light-color: #666;
+    --box-shadow: 0 .1rem 1rem rgba(0,0,0.1);
+    --border: 2rem solid rgba(0,0,0.1);
+    --outline: .1rem solid rgba(0,0,0.1);
+  
+  }
+  html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+  }
+ img{
+    width: 100%;
+    margin-top: 90px;
+    margin-left: 80px;
+ }
+ body{
+    color:var(--text-color);
+ }
+ .header{
+    border: 0px solid;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right:0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: #ffffff96;
+    box-shadow: var(--box-shadow);
+  }
+  .header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+  }
+  .header .logo i{
+    color: var(--black);
+  }
+  .header .navbar a{
+    font-size: 1.7rem;
+    margin: 0 4rem;
+    color: rgba(0, 0, 0, 0.9);
+    font-display: bold;
+    
+  }
+  .header .navbar a:hover{
+   color:rgb(64, 255, 47);
+  }
+  .header .icons div{
+    border: 0px solid;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: 0.5rem;
+    background: #eee;
+    color: black;
+    font-size: 2rem;
+    margin-right: 0.3rem;
+    text-align: center;
+    cursor: pointer;
+    
+  }
+  .header .icons div:hover{
+   background: rgb(64, 255, 47);
+   color: white;
+  }
+ 
+.navbar ul{
+    list-style-type: none;
+    overflow: hidden;
+    padding:10px;
+    background-color: rgba(212, 203, 203, 0);
+    
+
+}
+.navbar li {
+ padding-left: 10%;
+ padding-right: 0%;
+  float:left; 
+ 
+  
+ 
+}
+.navbar li a{
+    
+    display: block;
+    text-align: center;
+    text-decoration: none;  
+    color: white;
+    text-align: center;
+    
+}
+.navbar ul li a.active{
+    text-decoration: underline;
+}
+
+
+#cart-icon{
+    font-size: 1.8rem;
+    cursor: pointer;
+
+}
+section {
+padding: 4rem 0 3rem;
+}
+.section-title{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+   margin-top: 1.5rem;
+}
+.shop{
+    margin-top:2rem ;
+}
+.shop-content{
+    margin-left: 5rem;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px,auto));
+gap: 4.5rem;
+}
+.container{
+    
+max-width: 1068px;
+margin: auto;
+
+width: 100%;
+
+}
+.product-box {
+position: relative;
+}
+.product-box:hover {
+padding: 10px;
+border: 1px solid var(--text-color);
+transition: 0.4s;
+}
+.product-img {
+width: 100%;
+height: auto;
+margin-bottom: 0.5rem;
+}
+.product-title {
+    
+font-size: 1.1rem;
+font-weight: 600;
+text-transform: uppercase;
+margin-bottom: 0.5em;
+margin-left: 100px;
+}
+.price {
+    margin-left: 100px;
+font-weight: 500;
+}
+.add-cart {
+position: absolute;
+bottom: 0;
+right: 0;
+text-align: right;
+background: #fff;
+color: black;
+padding: 10px;
+cursor: pointer;
+margin-left: 20px;
+}
+.add-cart:hover {
+background: hsl(249, 32%, 17%);
+}
+.cart {
+position: fixed;
+top: 0;
+right: -100%;
+width: 360px;
+min-height: 100vh;
+padding: 20px;
+background: var(--bg-color);
+box-shadow: -2px 4px hsl(0 4% 15% / 10%);
+transition: 0.3s;
+
+}
+.cart-title{
+text-align: center;
+font-size: 1.5rem;
+font-weight: 600;
+margin-top: 2rem;
+}
+.cart-box{
+ display: grid;  
+ grid-template-columns: 32% 50% 18%;
+ align-items: center;
+ gap: 1rem;
+ margin-top:1rem
+
+}
+
+.cart-img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+
+}
+.detail-box{
+    display: grid;
+    row-gap: 0.5rem;
+}
+.cart-product-title{
+    font-size: 1rem;
+    text-transform: uppercase;
+
+
+}
+.cart-price{
+   font-weight: 500; 
+}
+.cart-quantity{
+    border: 1px solid var(--text-color);
+    outline-color: var(--main-color);
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+}
+.cart-remove{
+    font-size: 24px;
+   color: var(--main-color);
+   cursor: pointer;
+}
+.total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--text-color) ;
+}
+.total-title{
+    font-size:1rem ;
+    font-weight: 600;
+}
+.total-price{
+    margin-left: 0.5rem;
+
+}
+.btn-buy{
+  display: flex;  
+  margin: 1.5rem auto 0 auto;
+  padding: 12px 20px;
+  border: none;
+  background: var(--main-color);
+  color: var(--bg-color);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btn-buy:hover{
+    background: var(--text-color);
+}
+#close-cart{
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+
+}
+.cart.active{
+    right: 0;
+}
+#cart-icon{
+    color: #fff;
+    font-size:1.8rem ;
+    cursor: pointer;
+   position: relative;
+   bottom: 36px;
+   left: 1400px;
+}
+.navbar img{
+   width: 2%;
+    position: absolute;
+    top: 11%;
+    right: 10%;   
+}
+.category-section {
+position:fixed;
+top: 10%;
+left: 0px;
+width: 15%;
+background-color: #f2f2f2;
+padding: 10px; 
+margin-top: 30px 
+}
+.category-section li {
+padding-top: 20%;
+padding-bottom: 20%;
+color: rgb(12, 56, 235);
+font-size: 125%;
+list-style-type: none;
+
+}
+.category-section a{
+text-decoration: none;
+color: black;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+.category-section li a:hover{
+color: rgb(89, 255, 0);
+text-decoration: underline;
+}
+.header .icons div{
+    border: 0px solid;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: 0.5rem;
+    background: #eee;
+    color: black;
+    font-size: 2rem;
+    margin-right: 0.3rem;
+    text-align: center;
+    cursor: pointer;
+    
+  }
+  .header .icons div:hover{
+   background: rgb(64, 255, 47);
+   color: white;
+  }
+  #cart-icon {
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    position: relative;
+    bottom: 36px;
+    left: 1400px;
+}
+
+
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        
+        <div class="navbar">
+            
+            <ul>
+                <a href="#" class="logo"><i class="fa-solid fa-paw">Pet shop</i></a>
+                <a href="homepage.html">Home</a>
+                <a href="cats.html">Cats</a>
+                <a href="dogs.html">Dogs</a>
+                <a href="register.html">Register</a>
+                <a href="aboutus.html">About</a>
+                <li><a href="login.html"><img src="login.png" alt=""></a></li>
+               
+                
+             
+               
+            </ul>
+            <i class='bx bx-shopping-bag' id="cart-icon"></i>
+          
+           
+        </div> 
+        <div class="cart">
+            <h2 class="cart-title">Your Cart</h2>
+            <div class="cart-content">
+               
+            </div>
+            <!-- Total -->
+    <div class="total">
+    <div class="total-title">Total</div>
+    <div class="total-price">RS0</div>
+    </div>
+    <!-- Buy Button -->
+    <button type="button" class="btn-buy">Buy Now</button>
+    <i class='bx bx-x' id="close-cart"></i>
+        </div>
+       
+    </header>
+   
+   
+      <section class="shop container">
+        
+        <div class="shop-content">
+            <div class="category-section">
+                <!-- Your category section content goes here -->
+                <h2>Summer Special</h2>
+                <ul>
+                    <li><a href="#wet_food">wet_food</a></li>
+                    <li><a href="#dry_food">dry_food</a></li>
+                    <li><a href="#accessories">accessories</a></li>
+                    <li><a href="#carriers">carriers</a></li>
+                    <li><a href="#toys">toys</a></li>
+                </ul>
+              </div>
+            <div class="product-box">
+                <img src="drools_puppy_food.jpg" alt="" class="product-img" width="100" height="100">
+                <h2 class="product-title">Drools puppy food</h2>
+                <span class="price">₹300</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="dog_shampoo.webp" alt="" class="product-img" width="100" height="100">
+                <h2 class="product-title">dog_accessories</h2>
+                <span class="price">₹200</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="himalayan_puppy_food.jpg" alt="" class="product-img" width="100" height="100">
+                <h2 class="product-title">dry_dog_food</h2>
+                <span class="price">₹500</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="pedigree_puppy_food.jpg" alt="" class="product-img" width="100" height="100">
+                <h2 class="product-title">Wet_dog_food</h2>
+                <span class="price">₹500</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="drools_puppy_food.jpg" alt="" class="product-img" width="100" height="100">
+                <h2 class="product-title">Wet_dog_food</h2>
+                <span class="price">₹500</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="pedigree_wet_dog_food.jpg" alt="" class="product-img" width="100" height="100">
+                <h2 class="product-title">Wet_dog_food</h2>
+                <span class="price">₹500</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="royal_canin_german_puppy_food.jpg" alt="" class="product-img" width="100" height="100">
+                <h2 class="product-title">dry_dog_food</h2>
+                <span class="price">₹500</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="dog_collar.webp" alt="" class="product-img" width="100" height="100">
+                <h2 class="product-title">dog_accessories</h2>
+                <span class="price">₹500</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+        </div>
+       
+    </section>
+    </div>
+   
+   
+   
+    
+
+    <script src="cart12.js"></script>
+    
+</body>
+</html>

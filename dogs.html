@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="dogs_style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#" class="logo"><i class="fa-solid fa-paw">Pet shop</i></a>
+    
+        <nav class="navbar">
+          <a href="homepage.html">Home</a>
+          <a href="cats.html">Cats</a>
+          <a href="dogs.html">Dogs</a>
+          <a href="register.html">Register</a>
+          <a href="aboutus.html">About</a>
+        </nav>
+    
+        <div class="icons">
+          <a href="cart.html">
+            <div class="fa fa-shopping-cart" id="cart-btn"></div>
+          </a>
+          <a href="login.html">
+            <div class="fa fa-user" id="user-btn"></div>
+          </a>
+        </div>
+    
+      </header>
+    
+
+
+    <div class="wrapper">
+        <div id="search-container">
+            <input type="search" id="search-input" placeholder="Search product name here.." >
+            <button id="search">Search</button>
+        </div>
+        <div id="buttons">
+            <button class="button-value" onclick="filterProduct('all')">All</button>
+            
+            <button class="button-value" onclick="filterProduct('Dry_Dog_Food')">
+                Dry Dog Food
+            </button>
+            <button class="button-value" onclick="filterProduct('Wet_Dog_Food')">
+                Wet Dog Food
+            </button>
+            <button class="button-value" onclick="filterProduct('Carriers_&_Travel')">
+                Carriers & Travel
+            </button>
+            <button class="button-value" onclick="filterProduct('Dog_Toys')">
+                Dog Toys
+            </button>
+            <button class="button-value" onclick="filterProduct('Dog_Accessories')">
+                Dog Accessories
+            </button>
+        </div>
+        <div id="products"></div>
+    </div>
+    <script src="dogs_script.js"></script>
+</body>
+
+</html>
